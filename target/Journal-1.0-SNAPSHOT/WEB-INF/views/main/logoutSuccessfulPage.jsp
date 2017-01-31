@@ -1,9 +1,3 @@
-<%-- 
-    Document   : logoutSuccessfulPage
-    Created on : Jan 15, 2017, 3:49:55 PM
-    Author     : Roman
---%>
-
 <html>
 <head>
 <title>Logout</title>

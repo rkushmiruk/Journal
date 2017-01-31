@@ -22,7 +22,7 @@
         <intercept-url pattern="/pm" access="hasRole('ROLE_ProjectManager')" />
         <intercept-url pattern="/pm/*" access="hasRole('ROLE_ProjectManager')" />
         <intercept-url pattern="/customer" access="hasRole('ROLE_Customer')" />
-         <intercept-url pattern="/customer/*" access="hasRole('ROLE_Customer')" />
+        <intercept-url pattern="/customer/*" access="hasRole('ROLE_Customer')" />
         
         
         <access-denied-handler error-page="/403"/>

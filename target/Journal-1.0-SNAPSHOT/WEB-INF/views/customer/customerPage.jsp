@@ -1,5 +1,3 @@
-
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
 <jsp:directive.page contentType="text/html;charset=UTF-8"/> 

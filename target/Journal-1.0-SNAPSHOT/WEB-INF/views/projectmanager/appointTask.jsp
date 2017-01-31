@@ -1,8 +1,5 @@
-
-
 <%@ page language="java" contentType="text/html;"
 pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
 
@@ -12,7 +9,6 @@ pageEncoding="UTF-8"%>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
          <link href="${pageContext.request.contextPath}/resources//calendar/tcal.css" rel="stylesheet">
         <script type="text/javascript" src ="${pageContext.request.contextPath}/resources/calendar/tcal_en.js"></script>
-        
         <script type="text/javascript">
             
         function doAjaxPost() {
@@ -27,11 +23,8 @@ pageEncoding="UTF-8"%>
             taskTitle:taskTitle,
             employeeLogin : employeeLogin,
             sprintTitle:sprintTitle
-            
         },
-       
         success: function(response){
-       
         $('#info').html(response);
         },
         error: function(e){

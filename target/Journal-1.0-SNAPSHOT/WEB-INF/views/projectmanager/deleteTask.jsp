@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html;"
 pageEncoding="UTF-8"%>
 
@@ -16,7 +14,7 @@ pageEncoding="UTF-8"%>
         <script type="text/javascript">
             
         function doAjaxPost() {
-        // get the form values
+  
         var taskTitle = $('#taskTitle').val();
         var sprintTitle = $('#sprintTitle').val();
         $.ajax({
@@ -25,11 +23,9 @@ pageEncoding="UTF-8"%>
         data: {
             taskTitle:taskTitle,
             sprintTitle : sprintTitle
-            
         },
        
         success: function(response){
-       
         $('#info').html(response);
         },
         error: function(e){

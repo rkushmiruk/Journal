@@ -1,9 +1,3 @@
-<%-- 
-    Document   : loginPage
-    Created on : Jan 15, 2017, 3:49:33 PM
-    Author     : Roman
---%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  
 <html>

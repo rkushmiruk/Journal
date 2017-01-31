@@ -33,13 +33,6 @@
           class="com.romankushmiruk.journal.services.ProjectManagerServiceImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <!--
- 
-      <bean id="EmployeeDAOImpl"
-          class="com.romankushmiruk.webjournal.DAOImpl.EmployeeDAOImpl">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    -->
     
     
     

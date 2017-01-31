@@ -12,6 +12,5 @@ pageEncoding="UTF-8"%>
            <tr><td colspan="2"><h1>${message}</h1></td></tr>
            <tr><td colspan="2"> <input type ="button" name ="Back->" value ="Back->" onClick ="history.back()"><br/></td></tr>
         </table>
-       
     </body>
 </html>

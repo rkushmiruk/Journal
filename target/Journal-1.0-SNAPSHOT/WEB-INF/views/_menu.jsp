@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -13,8 +11,6 @@
      <a href="${pageContext.request.contextPath}/pm">PM</a>
       | &nbsp;
      <a href="${pageContext.request.contextPath}/customer">Customer</a>
-     
-     
      
      <c:if test="${pageContext.request.userPrincipal.name !=null}">
          | &nbsp;

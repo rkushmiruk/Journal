@@ -3,7 +3,6 @@
     Created on : Jan 31, 2017, 12:32:00 PM
     Author     : Roman
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
