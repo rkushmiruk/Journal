@@ -1,9 +1,3 @@
-<%-- 
-    Document   : welcomePage
-    Created on : Jan 15, 2017, 3:50:34 PM
-    Author     : Roman
---%>
-
 <%@page session="false"%>
 <html>
 <head>

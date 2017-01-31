@@ -9,11 +9,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        
-        <title>Add Users using ajax</title>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-        
-       
         <script type="text/javascript">
             
         function doAjaxPost() {
@@ -23,11 +19,9 @@ pageEncoding="UTF-8"%>
        
         $.ajax({
         type: "POST",
-        url: "/Journal/findProjectByPM",
+        url: "/Journal/admin/findProjectByPM",
         data: {
-            
             login : login
-            
         },
        
         success: function(response){
@@ -43,7 +37,7 @@ pageEncoding="UTF-8"%>
     <body>
         <h1>Find Project :</h1>
         <table>
-             <tr><td>Enter project manager login(Surname + name without space): </td><td> <input type="text" id="login"><br/></td></tr>
+            <tr><td>Enter project manager login(Surname + Name without space): </td><td> <input type="text" id="login"><br/></td></tr>
             <tr><td colspan="2"><input type="button" value="Find project" onclick="doAjaxPost()"><br/></td></tr>
             <tr><td colspan="2"> <input type ="button" name ="Back->" value ="Back->" onClick ="history.back()"><br/></td></tr>
            <tr><td colspan="2"><div id="info" style="color: green;"></div></td></tr>

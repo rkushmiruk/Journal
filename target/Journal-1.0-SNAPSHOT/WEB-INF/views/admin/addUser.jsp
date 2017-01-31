@@ -1,16 +1,12 @@
-
-
 <%@ page language="java" contentType="text/html;"
 pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        
-        <title>Add Users using ajax</title>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
         <script type="text/javascript">
         function doAjaxPost() {
-        // get the form values
+   
         var name = $('#name').val();
         var surname = $('#surname').val();
         var pass = $('#pass').val();
@@ -20,7 +16,7 @@ pageEncoding="UTF-8"%>
         
         $.ajax({
         type: "POST",
-        url: "/Journal/addUser",
+        url: "/Journal/admin/addUser",
         data: {
             name : name,
             surname : surname,
@@ -28,14 +24,11 @@ pageEncoding="UTF-8"%>
             email : email,
             phone : phone,
             post: post
-            
         },
        
         success: function(response){
-        
 
         $('#info').html(response);
-       
         },
         error: function(e){
         console.log(e);
@@ -56,9 +49,7 @@ pageEncoding="UTF-8"%>
                         <option>Employee</option>
                         <option>Customer</option>
                         <option>Admin</option>
-
             </select><br/></td></tr>
-
             <tr><td colspan="2"><input type="button" value="Add User" onclick="doAjaxPost()"><br/></td></tr>
             <tr><td colspan="2"><div id="info" style="color: green;"></div></td></tr>
             <tr><td colspan="2"> <input type ="button" name ="Back->" value ="Back->" onClick ="history.back()"><br/></td></tr>

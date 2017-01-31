@@ -7,8 +7,6 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        
-        <title>Add Users using ajax</title>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
         <script type="text/javascript">
         function doAjax() {
@@ -19,11 +17,10 @@ pageEncoding="UTF-8"%>
         var pass = $('#pass').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
-      
         
         $.ajax({
         type: "POST",
-        url: "/Journal/updateUserForm",
+        url: "/Journal/admin/updateUserForm",
         data: {
             id:id,
             name : name,
@@ -31,15 +28,9 @@ pageEncoding="UTF-8"%>
             pass : pass,
             email : email,
             phone : phone
-          
-            
         },
-       
         success: function(response){
-        
-
         $('#info').html(response);
-       
         },
         error: function(e){
         console.log(e);
@@ -51,7 +42,6 @@ pageEncoding="UTF-8"%>
     <body>
         <c:choose>
             <c:when test="${not empty users}">
-               
         <table>
             <tr><td>Enter your name : </td><td> <input type="text" id="name" value="${users.get(0).name}"><br/></td></tr>
             <tr><td>Surname : </td><td> <input type="text" id="surname" value="${users.get(0).surname}"><br/></td></tr>
@@ -66,7 +56,6 @@ pageEncoding="UTF-8"%>
                 </c:when>
             <c:otherwise>
                 <p>User does not exist!</p>
-                
             </c:otherwise>
         </c:choose>
              

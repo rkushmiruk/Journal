@@ -45,10 +45,6 @@ public class Users {
     public Users(){
         
     }
-   
-   
-   
-   
 
     public int getId() {
         return id;

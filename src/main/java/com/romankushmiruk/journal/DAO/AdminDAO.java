@@ -28,6 +28,7 @@ public interface AdminDAO {
    void deleteUser(String userLogin);
    void deleteProject(String projectTitle);
    
+   
   
    List<Users> findUserById(int id);
    List<Users> findUserBySurname(String surname);
@@ -45,6 +46,8 @@ public interface AdminDAO {
    List<Users> showAllPM();
    List<Project> showAllProject();
    List<Project> showAllPmProjects(String pmLogin);
+   List<Project> showAllFinishedProject();
+   List<Project> showAllNotFinishedProject();
   
            
    

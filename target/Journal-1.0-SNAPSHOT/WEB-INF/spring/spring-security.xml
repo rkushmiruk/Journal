@@ -16,10 +16,14 @@
         <intercept-url pattern="/logout" access="permitAll()" />
         
         <intercept-url pattern="/employee" access="hasRole('ROLE_Employee')" />
+        <intercept-url pattern="/employee/*" access="hasRole('ROLE_Employee')" />
         <intercept-url pattern="/admin" access="hasRole('ROLE_Admin')" />
+        <intercept-url pattern="/admin/*" access="hasRole('ROLE_Admin')" />
         <intercept-url pattern="/pm" access="hasRole('ROLE_ProjectManager')" />
+        <intercept-url pattern="/pm/*" access="hasRole('ROLE_ProjectManager')" />
         <intercept-url pattern="/customer" access="hasRole('ROLE_Customer')" />
-        <intercept-url pattern="/addUser" access="hasRole('ROLE_Admin')" />
+         <intercept-url pattern="/customer/*" access="hasRole('ROLE_Customer')" />
+        
         
         <access-denied-handler error-page="/403"/>
         
@@ -31,17 +35,6 @@
         <logout logout-url="/logout" logout-success-url="/logoutSuccessfulPage" 
          delete-cookies="JSESSIONID" invalidate-session="true"/>
     </http>
-    
-    
-<!--    <authentication-manager>
-        <authentication-provider>
-            <user-service>
-                <user name = "user1" password ="12345" authorities ="ROLE_Employee" />
-                <user name = "admin1" password ="12345" authorities ="ROLE_Employee,ROLE_Admin" />
-
-            </user-service>
-        </authentication-provider>
-    </authentication-manager>-->
     
     <authentication-manager>
         <authentication-provider>

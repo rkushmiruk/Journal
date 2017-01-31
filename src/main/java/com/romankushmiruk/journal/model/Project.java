@@ -6,11 +6,7 @@
 package com.romankushmiruk.journal.model;
 
 import java.util.Date;
-import javax.persistence.UniqueConstraint;
-
-
 import javax.validation.constraints.Future;
-
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -29,7 +25,6 @@ public class Project {
     private String customer;
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private Date beginDate;
-    @Future(message = "Finish Date must be in Future")
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private Date endDate;
     private Date finishDate;

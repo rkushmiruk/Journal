@@ -1,0 +1,17 @@
+ body {
+    
+    margin: 0;
+    padding: 0;
+}
+input {
+	background-color:#d9edf7;
+	width: 200px;
+    height: 25px;
+    margin: 0 auto;
+    padding:5px;
+   
+}
+input:hover{
+	background-color: #6ECFFF
+
+}

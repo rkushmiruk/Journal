@@ -9,7 +9,12 @@ package com.romankushmiruk.journal.model;
  *
  * @author Roman
  */
-public class Status {
-    private int id;
-    private String status;
+public enum Status {
+    Closed,
+    Critical,
+    Medium,
+    High,
+    Low;
+    
+    
 }

@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.romankushmiruk.journal.services;
 
 import com.romankushmiruk.journal.DAO.AdminDAO;
-import com.romankushmiruk.journal.model.Contact;
-import com.romankushmiruk.journal.model.Customer;
-import com.romankushmiruk.journal.model.Employee;
 import com.romankushmiruk.journal.model.Post;
 import com.romankushmiruk.journal.model.Project;
 import com.romankushmiruk.journal.model.Users;
@@ -202,14 +194,9 @@ public class AdminServiceImpl implements AdminDAO, InitializingBean{
     @Override
     public void updateProject(Project project) {
         Map<String,String> paramMap = new HashMap<>();
-        
-        paramMap.put("p_title", project.getTitle());
-        paramMap.put("p_begin", project.getBeginDate().toString());
-        paramMap.put("p_end",project.getEndDate().toString());
-      
         String sql = "Update project set p_title=?,p_begin=?,p_end=? where p_id=?";
         jdbcTemplate.update(sql, new Object[]{
-            paramMap.get("p_title"),
+            project.getTitle(),
             project.getBeginDate(),
             project.getEndDate(),
             project.getId()
@@ -217,8 +204,6 @@ public class AdminServiceImpl implements AdminDAO, InitializingBean{
         });
         
     }
-    
-    
     
     @Override
     public void deleteUser(String userLogin) {
@@ -371,6 +356,20 @@ public class AdminServiceImpl implements AdminDAO, InitializingBean{
      String sql = "SELECT * FROM project";
      return jdbcTemplate.query(sql, rowMapperProject);
     }
+
+    @Override
+    public List<Project> showAllFinishedProject() {
+        String sql = "SELECT * FROM project where p_finish is not null";
+        return jdbcTemplate.query(sql, rowMapperProject);
+    }
+
+    @Override
+    public List<Project> showAllNotFinishedProject() {
+         String sql = "SELECT * FROM project where p_finish is null";
+        return jdbcTemplate.query(sql, rowMapperProject);
+    }
+    
+    
 
     
     @Override
