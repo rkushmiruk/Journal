@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component("DAOparams")
 public class DAOParams {
         public String DRIVER="oracle.jdbc.driver.OracleDriver";
-	public String URL="jdbc:oracle:thin:@localhost:1522:XE";
+	public String URL="jdbc:oracle:thin:@netcracker.cb4jpppmphf8.us-west-2.rds.amazonaws.com:1522:ORCL";
 	public String LOGIN="Ramiko";
-	public String PASS="231094";
+	public String PASS="231094Fear";
 }
